@@ -1,5 +1,6 @@
 FROM beevelop/ionic
 WORKDIR /usr/app/src
-COPY ./www/package.json .
+COPY package*.json .
 RUN npm install
-COPY ./www .
+COPY . .
+RUN ionic build
