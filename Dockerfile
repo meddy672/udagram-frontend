@@ -1,4 +1,4 @@
-FROM ionic:6.13.1
+FROM beevelop/ionic
 WORKDIR /usr/app/src
 COPY ./www/package.json .
 RUN npm install
