@@ -13,7 +13,7 @@ The udagram frontend consist of the user interface for the Udagram application. 
 1. Clone or download the repository
 2. Download and install **Docker**
 3. `cd` into the root directory and run `docker run -d <image-id>`
-4. Navigate to [localhost](http://localhost:4200)
+4. Navigate to [localhost:4200](http://localhost:4200)
 
 ### Ionic
 This application was built using ionic framework. To learn more about ionic checkout the [docs](https://ionicframework.com/)
