@@ -1,4 +1,4 @@
-FROM beevelop/ionic
+FROM beevelop/ionic AS ionic
 WORKDIR /usr/app/src
 COPY package*.json ./
 RUN npm install
