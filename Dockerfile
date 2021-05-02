@@ -1,8 +1,10 @@
-FROM beevelop/ionic AS ionic
-WORKDIR /usr/app/src
-COPY package*.json ./
+FROM node:13-alpine as build
+WORKDIR /app
+COPY package*.json /app/
+RUN npm install -g ionic
 RUN npm install
-COPY . .
-RUN ng build
+COPY ./ /app/
+RUN npm run-script build:prod
 FROM nginx:alpine
-COPY --from=ionic  /usr/app/www /usr/share/nginx/html
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=build /app/www/ /usr/share/nginx/html/
