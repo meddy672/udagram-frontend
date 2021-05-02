@@ -4,4 +4,3 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 RUN ionic build
-COPY ./wwww .
